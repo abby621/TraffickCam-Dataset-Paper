@@ -146,13 +146,50 @@ What should the size/division of the training/validation/test sets be?
         \includegraphics[height=1in]{figures/data_augmentation/5.png}
         \caption{}
     \end{subfigure}
-    \caption[]{}
+    \caption[Data augmentation to mimic properties of query images.]{In order to better match across different lighting conditions, scales and perspectives, and in the presence of large occlusions, we perform a series of data augmentation steps on our training data: (a) the original image; (b) rotated; (c) cropped; (d) people mask applied; (e) color filter rendered.}
     \label{fig:data_augmentation}
 \end{figure*}
 
+\begin{figure}
+    \centering
+    \includegraphics[height=3in]{figures/data_augmentation/accuracy_at_k.png}
+    \caption[Accuracy at K for whole image search.]{TODO: Update this with the final test set. Also TODO: Evaluate if you just use expedia images for training.}
+    \label{fig:accuracyAtK}
+\end{figure}
 
 
 \subsection{Object-centric Search}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{3.2in}
+        \begin{subfigure}[b]{1.05in}
+            \includegraphics[height=.77in]{figures/cartoonQueries/wholeIm1.png}
+        \end{subfigure}
+        \unskip \vrule
+        \begin{subfigure}[b]{2.1in}
+            \includegraphics[height=.77in]{figures/cartoonQueries/wholeIm2.png}
+            \includegraphics[height=.77in]{figures/cartoonQueries/wholeIm3.png}
+        \end{subfigure}
+        \caption{Whole Image Search}
+        \label{fig:wholeImage}
+    \end{subfigure}
+    \begin{subfigure}[b]{3.2in}
+        \begin{subfigure}[b]{1.05in}
+            \includegraphics[height=.77in]{figures/cartoonQueries/justLamp1.png}
+        \end{subfigure}
+        \unskip \vrule
+        \begin{subfigure}[b]{2.1in}
+            \includegraphics[height=.77in]{figures/cartoonQueries/justLamp2.png}
+            \includegraphics[height=.77in]{figures/cartoonQueries/justLamp3.png}
+        \end{subfigure}
+        \caption{Object-centric Image Search}
+        \label{fig:objectCentric}
+    \end{subfigure}
+    \caption[Whole image search vs. object-centric search]{(a) In a typical image search based on the whole image the results are the images that look most similar to the entire image (e.g., similar color profiles and furniture in the same configuration). (b) In our object-centric image search, the input is a selected object of interest, and the results are images that contain objects that are most similar to the query object (e.g., images with yellow lamps).}
+    \label{fig:wholeImVsObjectCentric}
+\end{figure}
+
 \subsubsection{Baseline Evaluation}
 
 %References and End of Paper
